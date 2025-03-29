@@ -149,7 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // For instant scratch completion on click/tap
     video.addEventListener("click", () => {
-      forceScratchCompletion();
+      console.log("aaa");
+      checkScratchCompletion();
     });
   }
 
@@ -163,26 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
         scratchedPixels++;
       }
     }
-
-    const scratchedPercentage =
-      (scratchedPixels / (canvas.width * canvas.height)) * 100;
-
-    if (scratchedPercentage > 20) {
-      gsap.to(video, {
-        opacity: 0,
-        duration: 1,
-        onComplete: function () {
-          gsap.set(video, { display: "none" });
-        },
-      });
-      gsap.to(document.getElementById("hiddenImage"), {
-        opacity: 1,
-        duration: 1,
-      });
-    }
-  }
-
-  function forceScratchCompletion() {
     gsap.to(video, {
       opacity: 0,
       duration: 1,
