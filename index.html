@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=600,height=300" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" type="text/css" href="./style/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@splidejs/splide@4.1.3/dist/css/splide.min.css"
+    />
+    <title>Scratchable Video Banner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="banner-container">
+      <!-- The hidden image to reveal -->
+      <div class="slider-container">
+        <div class="splide image-carousels">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide no-margin facilities-slide-images">
+                <img src="./img/carousel-3.webp" alt="Image 1" />
+              </li>
+              <li class="splide__slide no-margin facilities-slide-images">
+                <img src="./img/carousel-2.webp" alt="Image 2" />
+              </li>
+              <li class="splide__slide no-margin facilities-slide-images">
+                <img src="./img/carousel-1.webp" alt="Image 3" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="logo">
+          <a href="javascript:window.open(window.clickTag);void(0)">
+            <img src="./img/volkswagen-logo.png" />
+          </a>
+      </div>
+      <!-- Video on top -->
+      <video id="videoElement" autoplay muted loop playsinline>
+        <source src="./video/video1.mp4" type="video/mp4" />
+        </div>
+      </video>
+      <!-- Canvas used for scratch detection -->
+      <canvas id="scratchCanvas" width="600" height="300"></canvas>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+    ></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

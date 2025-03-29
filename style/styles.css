@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+.banner-container {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+#videoElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 2;
+  -webkit-mask-image: url();
+  mask-image: url();
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+#scratchCanvas {
+  display: none; /* Hidden because we only use it to generate the mask */
+}
+.logo {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 7%;
+  height: auto;
+  transform: translateX(-50%);
+}
+.logo img {
+  width: 100%;
+  height: auto;
+}
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  z-index: 1;
+}
+.splide__slide img {
+  width: 100%;
+}
+.slider-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.image-carousels {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+.image-carousels:active {
+  cursor: grabbing;
+}
+.splide__pagination__page {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 5px !important;
+}
+.splide__pagination__page.is-active {
+  transform: none !important;
+}
+.splide__pagination {
+  right: unset !important;
+}
+.splide__pagination__page {
+  background: #474747 !important;
+  opacity: 1 !important;
+}
+.splide__pagination__page.is-active {
+  background: #fff !important;
+}
